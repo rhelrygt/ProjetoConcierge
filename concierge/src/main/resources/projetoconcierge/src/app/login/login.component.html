@@ -1,0 +1,48 @@
+<form [formGroup]="loginform">
+    <div class="titulo-meio-tela"  style="padding-top: 100px;">
+        <h2>Login</h2>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-4">
+			<mat-form-field class="example-full-width"> <mat-label>CPF</mat-label>
+			<input matInput [formControlName]="'cpf'" type="number"> </mat-form-field>
+		</div>
+        <div class="col-sm-4">
+
+        </div>
+    </div>
+
+    <div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<mat-form-field class="example-full-width"> <mat-label>Senha</mat-label>
+			<input matInput [formControlName]="'senha'" type="password">
+			</mat-form-field>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+
+    <div class="row" style="padding-top: 20px;">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<h4>Ainda não possuí cadastro? <a routerLink="/cadastrar-usuario" >Clique aqui!</a></h4>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+
+    <div class="row baixo2" style="padding-top: 100px;">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-2" style="text-align: right;">
+			<button mat-raised-button color="primary" (click)="onClickLogin()">Login</button>
+		</div>
+		<div class="col-sm-2" style="text-align: left;">
+			<button mat-raised-button routerLink="/">Voltar</button>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+
+
+</form>

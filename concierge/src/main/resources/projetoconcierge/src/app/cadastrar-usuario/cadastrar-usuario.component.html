@@ -1,266 +1,299 @@
 <form [formGroup]="userform">
-  <div class="titulo-meio-tela"><h2>Cadastrar Usuário</h2></div>
-      <div class="row">
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
-        <mat-form-field class="example-full-width" >
-          <mat-label>Nome completo</mat-label>
-          <input matInput [formControlName]="'nome'">
-        </mat-form-field>
-      </div>
-      <div class="col-md-4"></div>
-    </div>
+	<div class="titulo-meio-tela">
+		<h2>Cadastrar Usuário</h2>
+	</div>
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+			<mat-form-field class="example-full-width"> <mat-label>Nome
+			completo</mat-label> <input matInput [formControlName]="'nome'"> </mat-form-field>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
 
-    <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <mat-form-field class="example-full-width">
-          <mat-label>Telefone</mat-label>
-          <span matPrefix> &nbsp;</span>
-          <input type="tel" matInput [formControlName]="'telefone'" placeholder="(62) 91234-5678" type="number">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
-
-
-    <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <mat-form-field class="example-full-width">
-          <mat-label>CPF</mat-label>
-          <input matInput [formControlName]="'cpf'" type="number">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<mat-form-field class="example-full-width"> <mat-label>Telefone</mat-label>
+			<span matPrefix> &nbsp;</span> <input type="tel" matInput
+				[formControlName]="'telefone'" placeholder="(62) 91234-5678"
+				type="number"> </mat-form-field>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
 
-    <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <mat-form-field class="example-full-width">
-          <mat-label>Senha</mat-label>
-          <input matInput [formControlName]="'senha'" type="password">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<mat-form-field class="example-full-width"> <mat-label>CPF</mat-label>
+			<input matInput [formControlName]="'cpf'" type="number"> </mat-form-field>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
-    <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-2">
-        <mat-form-field class="example-full-width">
-          <mat-label>RG</mat-label>
-          <input matInput [formControlName]="'num_rg'" type="number">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-2">
-        <mat-form-field class="example-full-width">
-          <mat-label>Orgão Expedidor</mat-label>
-          <input matInput [formControlName]="'orgao_expedidor'">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <label>Data Nascimento:</label>
-        <input type="date" [formControlName]="'data_nascimento'">
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<mat-form-field class="example-full-width"> <mat-label>Senha</mat-label>
+			<input matInput [formControlName]="'senha'" type="password">
+			</mat-form-field>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
-    <div class="row" style="margin-top: 15px;">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <mat-label>Sexo:</mat-label>
-        <mat-radio-group [formControlName]="'sexo'">
-          <div><mat-radio-button class="example-margin" style="padding-top: 10px;"  value="M">Masculino</mat-radio-button></div>
-          <div><mat-radio-button class="example-margin" value="F">Feminino</mat-radio-button></div>
-      </mat-radio-group>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-2">
+			<mat-form-field class="example-full-width"> <mat-label>RG</mat-label>
+			<input matInput [formControlName]="'num_rg'" type="number"> </mat-form-field>
+		</div>
+		<div class="col-sm-2">
+			<mat-form-field class="example-full-width"> <mat-label>Orgão
+			Expedidor</mat-label> <input matInput [formControlName]="'orgao_expedidor'">
+			</mat-form-field>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
-    <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <mat-form-field class="example-full-width">
-          <mat-label>Rua</mat-label>
-          <input matInput [formControlName]="'rua'">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<label>Data Nascimento:</label> <input type="date"
+				[formControlName]="'data_nascimento'">
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
-    <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <mat-form-field class="example-full-width ">
-          <mat-label>Bairro</mat-label>
-          <input matInput [formControlName]="'bairro'" placeholder="Ex.: Jaiara">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row" style="margin-top: 15px;">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<mat-label>Sexo:</mat-label>
+			<mat-radio-group [formControlName]="'sexo'">
+			<div>
+				<mat-radio-button class="example-margin" style="padding-top: 10px;"
+					value="M">Masculino</mat-radio-button>
+			</div>
+			<div>
+				<mat-radio-button class="example-margin" value="F">Feminino</mat-radio-button>
+			</div>
+			</mat-radio-group>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
-    <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <mat-form-field class="example-full-width">
-          <mat-label>Complemento</mat-label>
-          <input matInput [formControlName]="'complemento'" placeholder="">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<mat-form-field class="example-full-width"> <mat-label>Rua</mat-label>
+			<input matInput [formControlName]="'rua'"> </mat-form-field>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
-    <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <mat-form-field class="example-full-width">
-          <mat-label>Cidade</mat-label>
-          <input matInput #postalCode maxlength="30" [formControlName]="'cidade'" placeholder="Ex.: Anápolis">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<mat-form-field class="example-full-width "> <mat-label>Bairro</mat-label>
+			<input matInput [formControlName]="'bairro'"
+				placeholder="Ex.: Jaiara"> </mat-form-field>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
-    <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <mat-form-field class="example-full-width">
-          <mat-label>Naturalidade</mat-label>
-          <input matInput [formControlName]="'naturalidade'">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<mat-form-field class="example-full-width"> <mat-label>Complemento</mat-label>
+			<input matInput [formControlName]="'complemento'" placeholder="">
+			</mat-form-field>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
-    <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <mat-form-field class="example-full-width">
-          <mat-label>Nome do Pai</mat-label>
-          <input matInput [formControlName]="'nome_pai'">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<mat-form-field class="example-full-width"> <mat-label>Cidade</mat-label>
+			<input matInput #postalCode maxlength="30"
+				[formControlName]="'cidade'" placeholder="Ex.: Anápolis"> </mat-form-field>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
-    <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <mat-form-field class="example-full-width">
-          <mat-label>Nome da Mãe</mat-label>
-          <input matInput [formControlName]="'nome_mae'">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<mat-form-field class="example-full-width"> <mat-label>Naturalidade</mat-label>
+			<input matInput [formControlName]="'naturalidade'"> </mat-form-field>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
-    <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <mat-label>Estado Civíl:</mat-label>
-        <mat-radio-group [formControlName]="'estado_civil'">
-          <div><mat-radio-button class="example-margin" style="padding-top: 15px;" value="Solteiro">Solteiro</mat-radio-button></div>
-          <div><mat-radio-button class="example-margin" value="Casado">Casado</mat-radio-button></div>
-          <div><mat-radio-button class="example-margin" value="Divorciado">Divorciado</mat-radio-button></div>
-          <div><mat-radio-button class="example-margin" value="viuvo">Viuvo</mat-radio-button></div>
-        </mat-radio-group>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<mat-form-field class="example-full-width"> <mat-label>Nome
+			do Pai</mat-label> <input matInput [formControlName]="'nome_pai'"> </mat-form-field>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
-    <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <mat-form-field class="example-full-width">
-          <mat-label>Ocupação</mat-label>
-          <input matInput [formControlName]="'ocupacao'" placeholder="Ex.: Estudante">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<mat-form-field class="example-full-width"> <mat-label>Nome
+			da Mãe</mat-label> <input matInput [formControlName]="'nome_mae'"> </mat-form-field>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
-    <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <mat-form-field class="example-full-width">
-          <mat-label>Renda</mat-label>
-          <input matInput [formControlName]="'renda'" placeholder="Ex.: 1000,00" type="number">
-        </mat-form-field>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<mat-label>Estado Civíl:</mat-label>
+			<mat-radio-group [formControlName]="'estado_civil'">
+			<div>
+				<mat-radio-button class="example-margin" style="padding-top: 15px;"
+					value="Solteiro">Solteiro</mat-radio-button>
+			</div>
+			<div>
+				<mat-radio-button class="example-margin" value="Casado">Casado</mat-radio-button>
+			</div>
+			<div>
+				<mat-radio-button class="example-margin" value="Divorciado">Divorciado</mat-radio-button>
+			</div>
+			<div>
+				<mat-radio-button class="example-margin" value="viuvo">Viuvo</mat-radio-button>
+			</div>
+			</mat-radio-group>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
-    <div class="row">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <label>Tipo Residencia:</label>
-        <mat-radio-group [formControlName]="'tipo_residencia'">
-          <div><mat-radio-button class="example-margin" style="padding-top: 15px;" value="Alugada">Alugada</mat-radio-button></div>
-          <div><mat-radio-button class="example-margin" value="Própia">Própia</mat-radio-button></div>
-          <div><mat-radio-button class="example-margin" value="Cedida">Cedida</mat-radio-button></div>
-        </mat-radio-group>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<mat-form-field class="example-full-width"> <mat-label>Ocupação</mat-label>
+			<input matInput [formControlName]="'ocupacao'"
+				placeholder="Ex.: Estudante"> </mat-form-field>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
-    <div class="row" style="padding-top: 15px;">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <label>Escolaridade:</label>
-        <mat-radio-group [formControlName]="'escolaridade'">
-          <div><mat-radio-button class="example-margin" style="padding-top: 15px;" value="fundamental-incompleto">Ensino Fundamental Incompleto</mat-radio-button></div>
-          <div><mat-radio-button class="example-margin" value="fundamental-completo">Ensino Fundamental Completo</mat-radio-button></div>
-          <div><mat-radio-button class="example-margin" value="medio-incompleto">Ensino Médio Incompleto</mat-radio-button></div>
-          <div><mat-radio-button class="example-margin" value="medio-completo">Ensino Médio Completo</mat-radio-button></div>
-          <div><mat-radio-button class="example-margin" value="superior-incompleto">Ensino Superior Incompleto</mat-radio-button></div>
-          <div><mat-radio-button class="example-margin" value="superior-completo">Ensino Superior Completo</mat-radio-button></div>
-        </mat-radio-group>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<mat-form-field class="example-full-width"> <mat-label>Renda</mat-label>
+			<input matInput [formControlName]="'renda'"
+				placeholder="Ex.: 1000,00" type="number"> </mat-form-field>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
-    <div class="row baixo2">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <label>Possui Deficiência:</label>
-        <mat-radio-group [formControlName]="'pcdef'">
-          <div><mat-radio-button class="example-margin" style="padding-top: 15px;" value="sim">Sim</mat-radio-button></div>
-          <div><mat-radio-button class="example-margin" value="não">Não</mat-radio-button></div>
-        </mat-radio-group>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<label>Tipo Residencia:</label>
+			<mat-radio-group [formControlName]="'tipo_residencia'">
+			<div>
+				<mat-radio-button class="example-margin" style="padding-top: 15px;"
+					value="Alugada">Alugada</mat-radio-button>
+			</div>
+			<div>
+				<mat-radio-button class="example-margin" value="Própia">Própia</mat-radio-button>
+			</div>
+			<div>
+				<mat-radio-button class="example-margin" value="Cedida">Cedida</mat-radio-button>
+			</div>
+			</mat-radio-group>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
-    <div class="row baixo2">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-          <label>Disponibilidade de Horário:</label>
-          <mat-radio-group [formControlName]="'disp_horario'">
-            <div><mat-radio-button class="example-margin" style="padding-top: 15px" value="M">Matutino</mat-radio-button></div>
-            <div><mat-radio-button class="example-margin" value="V">Vespertino</mat-radio-button></div>
-            <div><mat-radio-button class="example-margin" value="N">Noturno</mat-radio-button></div>
-          </mat-radio-group>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row" style="padding-top: 15px;">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<label>Escolaridade:</label>
+			<mat-radio-group [formControlName]="'escolaridade'">
+			<div>
+				<mat-radio-button class="example-margin" style="padding-top: 15px;"
+					value="fundamental-incompleto">Ensino
+				Fundamental Incompleto</mat-radio-button>
+			</div>
+			<div>
+				<mat-radio-button class="example-margin"
+					value="fundamental-completo">Ensino Fundamental
+				Completo</mat-radio-button>
+			</div>
+			<div>
+				<mat-radio-button class="example-margin" value="medio-incompleto">Ensino
+				Médio Incompleto</mat-radio-button>
+			</div>
+			<div>
+				<mat-radio-button class="example-margin" value="medio-completo">Ensino
+				Médio Completo</mat-radio-button>
+			</div>
+			<div>
+				<mat-radio-button class="example-margin" value="superior-incompleto">Ensino
+				Superior Incompleto</mat-radio-button>
+			</div>
+			<div>
+				<mat-radio-button class="example-margin" value="superior-completo">Ensino
+				Superior Completo</mat-radio-button>
+			</div>
+			</mat-radio-group>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
-    <div class="row baixo2">
-      <div class="col-sm-4"></div>
-      <div class="col-sm-2">
-        <button mat-raised-button color="primary" (click)="confirm()">Cadastrar</button>
-      </div>
-      <div class="col-sm-2">
-        <button mat-raised-button (click)="cancelar()">Cancelar</button>
-      </div>
-      <div class="col-sm-4"></div>
-    </div>
+	<div class="row baixo2">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<label>Possui Deficiência:</label>
+			<mat-radio-group [formControlName]="'pcdef'">
+			<div>
+				<mat-radio-button class="example-margin" style="padding-top: 15px;"
+					value="sim">Sim</mat-radio-button>
+			</div>
+			<div>
+				<mat-radio-button class="example-margin" value="não">Não</mat-radio-button>
+			</div>
+			</mat-radio-group>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+
+	<div class="row baixo2">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<label>Disponibilidade de Horário:</label>
+			<mat-radio-group [formControlName]="'disp_horario'">
+			<div>
+				<mat-radio-button class="example-margin" style="padding-top: 15px"
+					value="M">Matutino</mat-radio-button>
+			</div>
+			<div>
+				<mat-radio-button class="example-margin" value="V">Vespertino</mat-radio-button>
+			</div>
+			<div>
+				<mat-radio-button class="example-margin" value="N">Noturno</mat-radio-button>
+			</div>
+			</mat-radio-group>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+
+	<div class="row baixo2">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-2">
+			<button mat-raised-button color="primary" (click)="confirm()">Cadastrar</button>
+		</div>
+		<div class="col-sm-2">
+			<button mat-raised-button (click)="cancelar()">Cancelar</button>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 
 </form>

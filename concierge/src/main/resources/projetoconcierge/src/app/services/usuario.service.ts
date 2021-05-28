@@ -8,15 +8,15 @@ import { Observable } from 'rxjs';
 })
 export class UsuarioService {
 
-  apiurl="http://localhost:8080";
+  apiurl = "http://localhost:8080";
 
-constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-public postusuario(usuario:Usuario):Observable<any>{
-  return this.http.post(this.apiurl+'/usuario/save',usuario);
-}
-public getUsuario(id: number):Observable<any>{
-  return this.http.get(this.apiurl+'/usuario/findbyid/'+id);
-}
+  public postusuario(usuario: Usuario): Observable<any> {
+    return this.http.post(this.apiurl + '/usuario/save', usuario);
+  }
+  public getUsuario(id: number): Observable<any> {
+    return this.http.get(this.apiurl + '/usuario/findbyid/' + id);
+  }
 
 }

@@ -1,14 +1,20 @@
 <body>
-  <mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>Plataforma Concierge</span>
-    <span class="example-spacer"></span>
-    <div><button mat-raised-button (click)="goEditarUsuario()" >Editar Cadastro</button></div>
-    <div class="example-button-row"><button mat-raised-button (click)="goToCadastrarUsuario()">Cadastrar-se</button></div>
-    <div><button mat-raised-button color="primary">Entrar</button></div>
-  </mat-toolbar>
-    <router-outlet></router-outlet>
-  <div >alo alo</div>
+	<mat-toolbar>
+	<button mat-icon-button class="example-icon"
+		aria-label="Example icon-button with menu icon">
+		<mat-icon>menu</mat-icon>
+	</button>
+	<span (click)="goToHome()">Plataforma Concierge</span> <span class="example-spacer"></span>
+	<div>
+		<button mat-raised-button (click)="goEditarUsuario()">Editar
+			Cadastro</button>
+	</div>
+	<div class="example-button-row">
+		<button mat-raised-button (click)="goToCadastrarUsuario()">Cadastrar-se</button>
+	</div>
+	<div>
+		<button mat-raised-button (click)="goToLogin()" color="primary">Entrar</button>
+	</div>
+	</mat-toolbar>
+	<router-outlet></router-outlet>
 </body>

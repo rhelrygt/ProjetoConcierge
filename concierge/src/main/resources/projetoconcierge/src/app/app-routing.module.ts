@@ -1,3 +1,4 @@
+import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { UpdateUsuarioComponent } from './update-usuario/update-usuario.component';
 import { CadastrarUsuarioComponent } from './cadastrar-usuario/cadastrar-usuario.component';
@@ -10,7 +11,8 @@ const routes: Routes = [
   {path:"primeiro", component: DataBindingComponent},
   {path:"cadastrar-usuario", component: CadastrarUsuarioComponent},
   {path:"update-usuario", component: UpdateUsuarioComponent},
-  {path:"home", component: HomeComponent}
+  {path:"home", component: HomeComponent},
+  {path:"login", component: LoginComponent}
 ];
 
 @NgModule({

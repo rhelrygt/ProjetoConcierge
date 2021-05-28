@@ -18,6 +18,9 @@ import {MatSelectModule} from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdateUsuarioComponent } from './update-usuario/update-usuario.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { LoginComponent } from './login/login.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { CpfToltipComponent } from './components/validacao/cpf-toltip/cpf-toltip.component';
 
 
 
@@ -29,7 +32,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     AppComponent,
     DataBindingComponent,
     CadastrarUsuarioComponent,
-      UpdateUsuarioComponent
+      UpdateUsuarioComponent,
+      LoginComponent,
+      CpfToltipComponent
    ],
   imports: [
     BrowserModule,
@@ -46,7 +51,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     ReactiveFormsModule,
     MatSelectModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

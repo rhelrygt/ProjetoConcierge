@@ -21,7 +21,10 @@ export class AppComponent {
     this.router.navigate(['/update-usuario']);
   }
   goToHome(){
-    this.router.navigate(['/home']);
+    this.router.navigate(['/']);
+  }
+  goToLogin(){
+    this.router.navigate(['/login']);
   }
 }
 
