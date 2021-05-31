@@ -18,11 +18,9 @@ import com.example.concierge.model.Usuario;
 import com.example.concierge.service.UsuarioService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/usuario")
 public class UsuarioController {
-	private Long cpf = (long) 123456789;
-	private Date nasc = new Date();
+
 	@Autowired
 	UsuarioService service;
 	
@@ -30,12 +28,9 @@ public class UsuarioController {
 	public Usuario save(@RequestBody Usuario usuario) {
 		try {
 			return service.save(usuario);
-			
 		} catch (Exception e) {
-
 			return new Usuario();
 		}
-		
 	}
 	
 	@RequestMapping(value = "/findbyid/{id}", method = RequestMethod.GET)
