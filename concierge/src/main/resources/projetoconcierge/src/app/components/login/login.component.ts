@@ -1,9 +1,9 @@
-import { LoginService } from './../services/login.service';
+import { LoginService } from '../../services/login.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { cpf } from 'cpf-cnpj-validator'; 
 import {MatSnackBar} from '@angular/material/snack-bar';
-import { CpfToltipComponent } from '../components/validacao/cpf-toltip/cpf-toltip.component';
+import { CpfToltipComponent } from '../validacao/cpf-toltip/cpf-toltip.component';
 
 @Component({
   selector: 'app-login',
@@ -31,7 +31,8 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  onClickLogin(){ 
+  onClickLogin(){ //70000000023
+    let user : any = {username:this.loginform.controls['cpf'].value.toString(), password:this.loginform.controls['senha'].value};
     if(cpf.isValid(this.loginform.controls['cpf'].value.toString())){
       let user : any = {username:this.loginform.controls['cpf'].value.toString(), password:this.loginform.controls['senha'].value};
       console.log(user);
@@ -40,8 +41,6 @@ export class LoginComponent implements OnInit {
     }else{
       this.openSnackBar();
     };
-    
-
   }
 
 }

@@ -9,7 +9,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.web.bind.annotation.CrossOrigin;
 
 @Configuration
 @EnableWebSecurity
@@ -23,6 +22,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.csrf().disable().authorizeRequests()
                 .antMatchers("/home").permitAll()
                 .antMatchers(HttpMethod.POST, "/login").permitAll()
+                .antMatchers("/usuario/save").permitAll()
+                .antMatchers("/aluno/save").permitAll()
+                .antMatchers("/professor/save").permitAll()
+                .antMatchers("/coordenador/save").permitAll()
+                .antMatchers("/curso/save").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 // filtra requisições de login

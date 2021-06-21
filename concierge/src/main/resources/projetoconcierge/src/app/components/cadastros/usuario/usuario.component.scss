@@ -1,0 +1,51 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .example-button-row {
+    display: table-cell;
+    width: 120px;
+  }
+  
+  .titulo-meio-tela{
+    padding-top: 1%;
+    text-align: center;
+  }
+  
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+  .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .example-margin {
+    margin: 0 10px;
+  }
+  .calendario{
+    float: right;
+  }
+  
+  .baixo{
+    padding-top: 10px;
+    padding-bottom: 162px;
+  }
+  
+  .baixo2{
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  

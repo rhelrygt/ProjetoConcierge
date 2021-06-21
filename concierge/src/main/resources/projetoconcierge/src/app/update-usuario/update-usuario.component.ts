@@ -1,3 +1,4 @@
+import { Aluno } from './../models/aluno';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogElementsComponent } from './../components/dialog-elements/dialog-elements.component';
 import { UsuarioService } from './../services/usuario.service';
@@ -25,14 +26,14 @@ export class UpdateUsuarioComponent implements OnInit {
   //toppingList: any []= [{label:'Matutino', value:'M'}, {label:'Vespertino', value:'V'}, {label:'Noturno', value:'N'}];
 
   ngOnInit() {
-    this.creatform(new Usuario());
+    this.creatform(new Aluno());
     let id = Number (localStorage.getItem('usuarioId'));
     this.getUsuario(id);
     }
 
   constructor(private service:UsuarioService, private router: Router, public dialog: MatDialog) { }
 
-  creatform(usuario:Usuario){
+  creatform(usuario:Aluno){
     this.userform=new FormGroup({
       id:new FormControl(usuario.id),
       nome:new FormControl(usuario.nome),
@@ -63,7 +64,7 @@ export class UpdateUsuarioComponent implements OnInit {
 
   confirm(){
 
-    let usuario1 =  new Usuario();
+    let usuario1 =  new Aluno();
     usuario1.id= this.userform.controls['id'].value;
     usuario1.nome = this.userform.controls['nome'].value;
     usuario1.telefone = this.userform.controls['telefone'].value;
@@ -100,7 +101,7 @@ export class UpdateUsuarioComponent implements OnInit {
   getUsuario(id: number){
 
     this.service.getUsuario(id).subscribe((data:any)=>{
-      let usuario:Usuario = data;
+      let usuario:Aluno = data;
       //var datePipe = new DatePipe('en-US');
       //datePipe.transform(usuario.data_nascimento, "yyyy-MM-dd");
       //usuario.data_nascimento = new Date('1998-04-23');

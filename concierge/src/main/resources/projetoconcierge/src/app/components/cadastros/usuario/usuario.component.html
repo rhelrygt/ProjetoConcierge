@@ -1,0 +1,45 @@
+<form [formGroup]="userform">
+    <div class="titulo-meio-tela">
+		<h2>Cadastrar Usuário</h2>
+	</div>
+
+    <div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+			<mat-form-field class="example-full-width"> <mat-label>Nome
+			completo</mat-label> <input matInput [formControlName]="'nome'"> </mat-form-field>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+
+    <div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<mat-form-field class="example-full-width"> <mat-label>CPF</mat-label>
+			<input matInput [formControlName]="'cpf'" type="number"> </mat-form-field>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+
+    <div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<mat-form-field class="example-full-width"> <mat-label>Senha</mat-label>
+			<input matInput [formControlName]="'senha'" type="password">
+			</mat-form-field>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+
+    <div class="row baixo2">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-2" style="text-align: right;">
+			<button mat-raised-button color="primary" (click)="confirm()">Cadastrar</button>
+		</div>
+		<div class="col-sm-2" style="text-align: left;">
+			<button mat-raised-button routerLink="/">Voltar</button>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+
+</form>

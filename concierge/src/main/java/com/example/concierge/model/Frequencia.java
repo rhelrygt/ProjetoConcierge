@@ -37,7 +37,7 @@ public class Frequencia implements Serializable {
     @Column(name = "id_aluno")
     private Long id_aluno;
 
-    @Column(name = "id_aluno")
+    @Column(name = "data_aula")
     private Date data_aula;
 
     @Column(name = "presenca")

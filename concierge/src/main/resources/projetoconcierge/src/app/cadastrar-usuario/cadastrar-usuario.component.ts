@@ -1,11 +1,10 @@
 import { DialogElementsComponent } from './../components/dialog-elements/dialog-elements.component';
 import { UsuarioService } from './../services/usuario.service';
-import { Usuario } from './../models/usuario';
 import { Component, OnInit } from '@angular/core';
-import {MenuItem} from 'primeng/api';
-import { NgForm, FormGroup, FormControl } from '@angular/forms';
+import {FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
+import { Aluno } from '../models/aluno';
 
 @Component({
   selector: 'app-cadastrar-usuario',
@@ -24,14 +23,14 @@ export class CadastrarUsuarioComponent implements OnInit {
   toppingList: any []= [{label:'Matutino', value:'M'}, {label:'Vespertino', value:'V'}, {label:'Noturno', value:'N'}];
 
   ngOnInit() {
-    this.creatform(new Usuario());
+    this.creatform(new Aluno());
     }
 
   constructor(private service:UsuarioService, private router: Router, public dialog: MatDialog ) {
 
   }
 
-  creatform(usuario:Usuario){
+  creatform(usuario:Aluno){
     this.userform=new FormGroup({
       nome:new FormControl(usuario.nome),
       telefone:new FormControl(usuario.telefone),
@@ -61,7 +60,7 @@ export class CadastrarUsuarioComponent implements OnInit {
 
   confirm(){
 
-    let usuario1 =  new Usuario();
+    let usuario1 =  new Aluno();
     usuario1.nome = this.userform.controls['nome'].value;
     usuario1.telefone = this.userform.controls['telefone'].value;
     usuario1.cpf = this.userform.controls['cpf'].value;
@@ -91,6 +90,7 @@ export class CadastrarUsuarioComponent implements OnInit {
     }, (error:any)=>{console.log(error)});
 
   }
+  
   goToCadastrarUsuario() {
     this.router.navigate(['/cadastrar-usuario']);
   }

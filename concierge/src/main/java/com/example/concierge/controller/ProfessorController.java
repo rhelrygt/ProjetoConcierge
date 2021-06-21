@@ -2,6 +2,7 @@ package com.example.concierge.controller;
 
 import com.example.concierge.model.Professor;
 import com.example.concierge.service.ProfessorService;
+import com.example.concierge.view.ProfessorView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -16,11 +17,11 @@ public class ProfessorController {
     ProfessorService service;
 
     @RequestMapping(value = "/save", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Professor save(@RequestBody Professor professor) {
+    public ProfessorView save(@RequestBody ProfessorView professor) {
         try {
             return service.save(professor);
         } catch (Exception e) {
-            return new Professor();
+            return new ProfessorView();
         }
     }
 

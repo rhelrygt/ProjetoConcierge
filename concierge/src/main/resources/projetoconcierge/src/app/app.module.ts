@@ -18,9 +18,18 @@ import {MatSelectModule} from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdateUsuarioComponent } from './update-usuario/update-usuario.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import { LoginComponent } from './login/login.component';
+
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { CpfToltipComponent } from './components/validacao/cpf-toltip/cpf-toltip.component';
+import { UsuarioComponent } from './components/cadastros/usuario/usuario.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { LoginComponent } from './components/login/login.component';
+import { AlunoComponent } from './components/cadastros/aluno/aluno.component';
+import { ProfessorComponent } from './components/cadastros/professor/professor.component';
+import { AdminComponent } from './components/cadastros/admin/admin.component';
+import { CoordenadorComponent } from './components/cadastros/coordenador/coordenador.component';
+import { CursoComponent } from './components/cadastros/curso/curso.component';
+import { TurmaComponent } from './components/cadastros/turma/turma.component';
 
 
 
@@ -34,7 +43,15 @@ import { CpfToltipComponent } from './components/validacao/cpf-toltip/cpf-toltip
     CadastrarUsuarioComponent,
       UpdateUsuarioComponent,
       LoginComponent,
-      CpfToltipComponent
+      CpfToltipComponent,
+      UsuarioComponent,
+      HomepageComponent,
+      AlunoComponent,
+      ProfessorComponent,
+      AdminComponent,
+      CoordenadorComponent,
+      CursoComponent,
+      TurmaComponent
    ],
   imports: [
     BrowserModule,
@@ -52,7 +69,7 @@ import { CpfToltipComponent } from './components/validacao/cpf-toltip/cpf-toltip
     MatSelectModule,
     HttpClientModule,
     MatDialogModule,
-    MatSnackBarModule
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
