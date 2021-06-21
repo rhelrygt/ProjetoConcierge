@@ -33,7 +33,7 @@ public class CoordenadorService {
             cord.setId(coordenador.getId());
         }
         cord.setSecretaria(coordenador.getSecretaria());
-        cord.setId_usuario(cord.getId_usuario());
+        cord.setId_usuario(coordenador.getId_usuario());
         repository.save(cord);
 
         return coordenador;
