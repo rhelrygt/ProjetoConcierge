@@ -30,6 +30,7 @@ import { AdminComponent } from './components/cadastros/admin/admin.component';
 import { CoordenadorComponent } from './components/cadastros/coordenador/coordenador.component';
 import { CursoComponent } from './components/cadastros/curso/curso.component';
 import { TurmaComponent } from './components/cadastros/turma/turma.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -51,7 +52,8 @@ import { TurmaComponent } from './components/cadastros/turma/turma.component';
       AdminComponent,
       CoordenadorComponent,
       CursoComponent,
-      TurmaComponent
+      TurmaComponent,
+      HomeComponent
    ],
   imports: [
     BrowserModule,
