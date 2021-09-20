@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ProfessorService } from 'src/app/services/professor.service';
 import { Component, OnInit } from '@angular/core';
@@ -15,7 +16,7 @@ export class TurmaCadastroComponent implements OnInit {
   cursoArray: Array<any> = [];
   turmaForm: FormGroup;
 
-  constructor(private professorService: ProfessorService, private service: TurmaService, private cursoService: CursoService) { }
+  constructor(private professorService: ProfessorService, private service: TurmaService, private cursoService: CursoService, private route:Router) { }
 
   ngOnInit(): void {
     this.getListProfessor();
@@ -74,6 +75,8 @@ export class TurmaCadastroComponent implements OnInit {
 
 
     this.service.postTurma(turma).subscribe((data: any) => {
+      alert("Turma criada com sucesso");
+      this.route.navigate(['/coordenador'])
     }, (error: any) => { console.log(error) });
 
   }

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { CursoService } from 'src/app/services/curso.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
@@ -13,7 +14,7 @@ export class CursoCadastroComponent implements OnInit {
   cursoform: FormGroup;
 
 
-  constructor(private service:CursoService) { }
+  constructor(private service:CursoService, private route: Router) { }
 
   ngOnInit(): void {
     this.creatform(new Curso());
@@ -37,6 +38,8 @@ export class CursoCadastroComponent implements OnInit {
     curso.carga_horaria = this.cursoform.controls['carga_horaria'].value;
     console.log(curso);
     this.service.postCurso(curso).subscribe((data:any)=>{
+      alert("Curso cadastrado com sucesso");
+      this.route.navigate(['/coordenador'])
     }, (error:any)=>{console.log(error)});
 
   }
