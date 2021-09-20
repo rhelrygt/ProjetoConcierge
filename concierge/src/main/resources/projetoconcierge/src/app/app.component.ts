@@ -11,20 +11,45 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'projetoconcierge';
 
-  constructor( private router: Router) {
+  constructor(private router: Router) {
   }
 
-  goToCadastrarUsuario() {
-    this.router.navigate(['/cadastrar-usuario']);
+  goToCursos() {
+    this.router.navigate(['/cursos'])
   }
-  goEditarUsuario(){
-    this.router.navigate(['/update-usuario']);
+
+  goToTurmas() {
+    this.router.navigate(['/turmas'])
   }
-  goToHome(){
+
+  goToContato() {
+    this.router.navigate(['/contato'])
+  }
+
+  goToSobre() {
+    this.router.navigate(['/sobre'])
+  }
+
+  goToHome() {
     this.router.navigate(['/']);
   }
-  goToLogin(){
+
+  goToLogin() {
     this.router.navigate(['/login']);
+  }
+
+  goTo() {
+    this.router.navigate(['/professor']);
+  }
+
+  readLocalStorageValue(key: string) {
+    return localStorage.getItem(key);
+  }
+
+  logout(){
+    alert("Você será deslogado")
+    localStorage.clear();
+    this.router.navigate(['/'])
   }
 }
 

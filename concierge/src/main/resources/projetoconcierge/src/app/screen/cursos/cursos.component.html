@@ -1,0 +1,22 @@
+<div class="grid-container">
+    <div class="titulo">Cursos</div>
+    <div style="text-align: center;"><img src="../../../assets/normal_line.svg"></div>
+
+    <div class="subtitulo">Veja os cursos oferecidos pela Prefeitura</div>
+    <div>
+        <div class="card" *ngFor="let curso of ArrayCursos">
+            <div class="titulo2">{{curso.nome_curso}}</div>
+            <div style="text-align: center;" ><img src="../../../assets/normal_line_small.svg"></div>
+            <div class="descricao"> 
+                {{curso.descricao_curso}}
+
+            </div>
+            <div style="text-align: center;" ><img src="../../../assets/normal_line_small.svg"></div>
+            <div class="row">
+                <div class="col-sm-8 carga"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Certificado de {{curso.carga_horaria}} horas</div>
+                <div class="col-sm-4"><button (click)="goToTurmas()" style="margin-bottom: 10px;">Ver turmas</button></div>
+            </div>
+        </div>
+
+    </div>
+</div>

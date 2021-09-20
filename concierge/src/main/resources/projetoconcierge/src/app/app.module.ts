@@ -18,19 +18,34 @@ import {MatSelectModule} from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdateUsuarioComponent } from './update-usuario/update-usuario.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { CpfToltipComponent } from './components/validacao/cpf-toltip/cpf-toltip.component';
 import { UsuarioComponent } from './components/cadastros/usuario/usuario.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
-import { LoginComponent } from './components/login/login.component';
 import { AlunoComponent } from './components/cadastros/aluno/aluno.component';
 import { ProfessorComponent } from './components/cadastros/professor/professor.component';
 import { AdminComponent } from './components/cadastros/admin/admin.component';
 import { CoordenadorComponent } from './components/cadastros/coordenador/coordenador.component';
 import { CursoComponent } from './components/cadastros/curso/curso.component';
 import { TurmaComponent } from './components/cadastros/turma/turma.component';
-import { HomeComponent } from './components/home/home.component';
+import { TitulosComponent } from './components/Items/titulos/titulos.component';
+import { HomeComponent } from './screen/home/home.component';
+import { CursosComponent } from './screen/cursos/cursos.component';
+import { TurmasComponent } from './screen/turmas/turmas.component';
+import { ContatoComponent } from './screen/contato/contato.component';
+import { SobreComponent } from './screen/sobre/sobre.component';
+import { LoginComponent } from './screen/login/login.component';
+import { AlunoHomeComponent } from './screen/aluno-home/aluno-home.component';
+import { HistoricoTurmaComponent } from './screen/historico-turma/historico-turma.component';
+import { AlunoPerfilComponent } from './screen/aluno-perfil/aluno-perfil.component';
+import { CoordenadorHomeComponent } from './screen/coordenador-home/coordenador-home.component';
+import { CoordenadorCadastroComponent } from './screen/coordenador-cadastro/coordenador-cadastro.component';
+import { CursoCadastroComponent } from './screen/curso-cadastro/curso-cadastro.component';
+import { TurmaCadastroComponent } from './screen/turma-cadastro/turma-cadastro.component';
+import { ProfessorHomeComponent } from './screen/professor-home/professor-home.component';
+import { ProfessorListarComponent } from './screen/professor-listar/professor-listar.component';
 
 
 
@@ -53,7 +68,21 @@ import { HomeComponent } from './components/home/home.component';
       CoordenadorComponent,
       CursoComponent,
       TurmaComponent,
-      HomeComponent
+      HomeComponent,
+      TitulosComponent,
+      CursosComponent,
+      TurmasComponent,
+      ContatoComponent,
+      SobreComponent,
+      AlunoHomeComponent,
+      HistoricoTurmaComponent,
+      AlunoPerfilComponent,
+      CoordenadorHomeComponent,
+      CoordenadorCadastroComponent,
+      CursoCadastroComponent,
+      TurmaCadastroComponent,
+      ProfessorHomeComponent,
+      ProfessorListarComponent
    ],
   imports: [
     BrowserModule,
@@ -72,6 +101,7 @@ import { HomeComponent } from './components/home/home.component';
     HttpClientModule,
     MatDialogModule,
     MatSnackBarModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,24 @@
+<div class="grid-container">
+    <div class="titulo">Historico da turma</div>
+    <div style="text-align: center;"><img src="../../../assets/normal_line.svg"></div>
+
+    <div  >
+       <div *ngFor="let turma of turmasArray">
+            <div class="titulo2">{{turma.nome}}</div>
+            <div style="text-align: center;" ><img src="../../../assets/normal_line_small.svg"></div>
+            <div class="descricao"> 
+                <strong>Aluno:</strong> {{turma.nome}}
+                &nbsp;&nbsp;
+                <strong>Nota 1:</strong> {{turma.nota1}}
+                &nbsp;&nbsp;
+                <strong>Nota 2:</strong> {{turma.nota2}}
+
+            </div>
+            <div style="text-align: center;" ><img src="../../../assets/normal_line_small.svg"></div>
+            <div class="row">
+            </div>
+            
+        </div> 
+
+    </div>
+</div>

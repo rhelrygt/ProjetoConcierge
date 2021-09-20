@@ -15,7 +15,14 @@ export class CursoService {
   public postCurso(curso: Curso): Observable<any> {
     return this.http.post(this.apiurl + '/curso/save', curso);
   }
+
   public getCurso(id: number): Observable<any> {
     return this.http.get(this.apiurl + '/curso/findbyid/' + id);
   }
+
+  public getCursoList(): Observable<any> {
+    return this.http.get(this.apiurl + '/curso/list');
+  }
+
+
 }

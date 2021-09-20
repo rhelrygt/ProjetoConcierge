@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 @RestController
@@ -26,5 +27,20 @@ public class TurmaController {
     @RequestMapping(value = "/findbyid/{id}", method = RequestMethod.GET)
     public Optional<Turma> findById(@PathVariable(value = "id")Long id) {
         return service.findById(id);
+    }
+
+    @RequestMapping(value = "/findAll", method = RequestMethod.GET)
+    public ArrayList<Object> findAll() {
+        return service.findListCard();
+    }
+
+    @RequestMapping(value = "/findbyprofessor/{id}", method = RequestMethod.GET)
+    public ArrayList<Object> findAllByIdProfessor(@PathVariable(value = "id")Integer id) {
+        return service.findListCardByProfessor(id);
+    }
+
+    @RequestMapping(value = "/findbyaluno/{id}", method = RequestMethod.GET)
+    public ArrayList<Object> findAllByIdAluno(@PathVariable(value = "id")Integer id) {
+        return service.findListCardByAluno(id);
     }
 }

@@ -12,9 +12,8 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   public postLogin(user:any): Observable<any> {
-    console.log(user);
     //const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Connection','keep-alive').set('Accept-Encoding','gzip, deflate, br');
     
-    return this.http.post<any>(this.apiurl + '/login', user);
+    return this.http.post<any>(this.apiurl + '/auth/login', user );
   }
 }

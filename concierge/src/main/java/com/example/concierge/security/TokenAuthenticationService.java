@@ -33,6 +33,7 @@ public class TokenAuthenticationService {
         HashMap<String, String> token = new HashMap<String, String>();
 
         token.put("Authorization",JWT);
+        token.put("User","Teste");
         JSONObject json = new JSONObject(token);
         response.setContentType("application/json");
         System.out.println(json);

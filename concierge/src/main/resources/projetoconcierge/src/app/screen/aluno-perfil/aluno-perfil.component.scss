@@ -1,0 +1,96 @@
+.grid-container {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: 100%;
+    padding: 10px;
+    margin: 0px 50px;
+}
+
+.titulo {
+    border-radius: 8px;
+    text-align: center;
+    font-size: 36px;
+    color: #881200;
+}
+
+.titulo2 {
+    border-radius: 8px;
+    text-align: center;
+    font-size: 28px;
+    color: #881200;
+    font-weight: 400;
+}
+
+.subtitulo{
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    color: #8c8c8c;
+    margin-bottom: 15px;
+}
+
+.subtitulo2{
+    border-radius: 8px;
+    text-align: left;
+    font-size: 20px;
+    color: #333333;
+    padding: 20px;
+}
+
+.link{
+    font-size: 20px;
+    color: #169bd5;
+    cursor: pointer;
+}
+
+.card{
+    text-align: center;
+    width: 568px;
+    min-width: 568px;
+    max-width: 568px;
+    min-height: 345px;
+    max-height: 345px;
+    height: 345px;
+    margin: 0px 23px;
+    float: left;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.35);
+}
+
+.btn-login{
+    margin: 0px 10px;
+    background-color: #881200;
+    color: #ffffff;
+    width: 140px;
+    height: 40px;
+}
+
+.form{
+    text-align: left;
+    padding: 0px 180px;
+}
+
+.example-full-width {
+    width: 100%;
+    padding: 15px 0px;
+}
+
+.middle-width{
+    width: 50%;
+    padding: 15px 15px;
+}
+.middle-left{
+    width: 50%;
+    padding: 15px 15px 15px 0px;
+}
+.middle-right{
+    width: 50%;
+    padding: 15px 0px 15px 15px;
+}
+.btn-cancel{
+    margin: 0px 10px;
+    background-color: #ffffff;
+    color: #c71313;
+    width: 140px;
+    height: 40px;
+}

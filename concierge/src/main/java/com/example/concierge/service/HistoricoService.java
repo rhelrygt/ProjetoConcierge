@@ -5,6 +5,7 @@ import com.example.concierge.repository.HistoricoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 @Service
@@ -18,5 +19,11 @@ public class HistoricoService {
 
     public Optional<Historico> findById(Long id) {
         return repository.findById(id);
+    }
+
+    public ArrayList<Object> findHistoricoByTurma(Integer id){
+        ArrayList<Object> list = new ArrayList<>() ;
+        list = repository.findHistoricobyTurma(id);
+        return list;
     }
 }

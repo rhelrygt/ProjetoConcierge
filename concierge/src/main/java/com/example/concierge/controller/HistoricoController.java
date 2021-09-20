@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 @RestController
@@ -27,5 +28,10 @@ public class HistoricoController {
     @RequestMapping(value = "/findbyid/{id}", method = RequestMethod.GET)
     public Optional<Historico> findById(@PathVariable(value = "id")Long id) {
         return service.findById(id);
+    }
+
+    @RequestMapping(value = "/findbyturma/{id}", method = RequestMethod.GET)
+    public ArrayList<Object> findHistoricoByTurma(@PathVariable(value = "id")Integer id) {
+        return service.findHistoricoByTurma(id);
     }
 }

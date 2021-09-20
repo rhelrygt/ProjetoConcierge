@@ -7,6 +7,7 @@ import com.example.concierge.view.CoordenadorView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 @Service
@@ -41,5 +42,9 @@ public class CoordenadorService {
 
     public Optional<Coordenador> findById(Long id) {
         return repository.findById(id);
+    }
+
+    public ArrayList<Coordenador> findAll() {
+        return (ArrayList<Coordenador>) repository.findAll();
     }
 }

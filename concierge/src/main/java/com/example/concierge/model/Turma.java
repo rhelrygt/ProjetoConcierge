@@ -12,8 +12,7 @@ public class Turma implements Serializable {
     public Turma() {
     }
 
-    public Turma(Long id, Date data_inicio, Date data_fim, Date periodo_inscricao, Long horario_inicio, Long horario_final, Long qtdMax_alunos, String local_turma, Long id_curso, Long id_professor) {
-        this.id = id;
+    public Turma(Date data_inicio, Date data_fim, Date periodo_inscricao, String horario_inicio, String horario_final, Long qtdMax_alunos, String local_turma, Long id_curso, Long id_professor) {
         this.data_inicio = data_inicio;
         this.data_fim = data_fim;
         this.periodo_inscricao = periodo_inscricao;
@@ -25,7 +24,8 @@ public class Turma implements Serializable {
         this.id_professor = id_professor;
     }
 
-    public Turma(Date data_inicio, Date data_fim, Date periodo_inscricao, Long horario_inicio, Long horario_final, Long qtdMax_alunos, String local_turma, Long id_curso, Long id_professor) {
+    public Turma(Long id, Date data_inicio, Date data_fim, Date periodo_inscricao, String horario_inicio, String horario_final, Long qtdMax_alunos, String local_turma, Long id_curso, Long id_professor) {
+        this.id = id;
         this.data_inicio = data_inicio;
         this.data_fim = data_fim;
         this.periodo_inscricao = periodo_inscricao;
@@ -44,17 +44,17 @@ public class Turma implements Serializable {
     @Column(name = "data_inicio")
     private Date data_inicio;
 
-    @Column(name = "data_fim")
+    @Column(name = "data_final")
     private Date data_fim;
 
     @Column(name = "periodo_inscricao")
     private Date periodo_inscricao;
 
     @Column(name = "horario_inicio")
-    private Long horario_inicio;
+    private String horario_inicio;
 
     @Column(name = "horario_final")
-    private Long horario_final;
+    private String horario_final;
 
     @Column(name = "qtdmax_alunos")
     private Long qtdMax_alunos;
@@ -100,19 +100,19 @@ public class Turma implements Serializable {
         this.periodo_inscricao = periodo_inscricao;
     }
 
-    public Long getHorario_inicio() {
+    public String getHorario_inicio() {
         return horario_inicio;
     }
 
-    public void setHorario_inicio(Long horario_inicio) {
+    public void setHorario_inicio(String horario_inicio) {
         this.horario_inicio = horario_inicio;
     }
 
-    public Long getHorario_final() {
+    public String getHorario_final() {
         return horario_final;
     }
 
-    public void setHorario_final(Long horario_final) {
+    public void setHorario_final(String horario_final) {
         this.horario_final = horario_final;
     }
 
@@ -147,4 +147,6 @@ public class Turma implements Serializable {
     public void setId_professor(Long id_professor) {
         this.id_professor = id_professor;
     }
+
+
 }

@@ -1,0 +1,85 @@
+.grid-container {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: 100%;
+    padding: 10px;
+    margin: 0px 50px;
+}
+
+.titulo {
+    border-radius: 8px;
+    text-align: center;
+    font-size: 48px;
+    color: #881200;
+}
+
+.titulo2 {
+    padding: 40px 50px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 28px;
+    color: #881200;
+    font-weight: 400;
+}
+
+.subtitulo{
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.descricao{
+    border-radius: 8px;
+    text-align: left;
+    font-size: 14px;
+    color: #333333;
+    padding: 0px 20px;
+    height: 135px;
+}
+
+.carga{
+    border-radius: 8px;
+    text-align: left;
+    font-size: 14px;
+    color: #333333;
+    padding: 0px 20px;
+}
+
+.link{
+    font-size: 20px;
+    color: #169bd5;
+    cursor: pointer;
+}
+
+.card{
+    cursor: pointer;
+    text-align: center;
+    width: 458px;
+    min-width: 458px;
+    max-width: 458px;
+    min-height: 180px;
+    max-height: 180px;
+    height: 180px;
+    margin: 20px 76px;
+    float: left;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.35);
+}
+
+.card-central{
+    cursor: pointer;
+    margin-left: 30% !important;
+    text-align: center;
+    width: 458px;
+    min-width: 458px;
+    max-width: 458px;
+    min-height: 180px;
+    max-height: 180px;
+    height: 180px;
+    margin: 20px 76px;
+    float: left;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.35);
+}

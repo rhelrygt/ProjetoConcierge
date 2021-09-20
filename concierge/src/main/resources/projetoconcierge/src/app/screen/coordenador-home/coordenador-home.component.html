@@ -1,0 +1,19 @@
+<div class="grid-container">
+    <div class="titulo">Seja bem-vindo, {{coordenador.nome}}</div>
+    <div style="text-align: center;"><img src="../../../assets/normal_line.svg"></div>
+
+    <div>
+        <div class="card" (click)="goToCadastro()">
+            <div class="titulo2">Clique aqui para cadastrar um Professor ou Coordenador</div>           
+        </div>
+
+        <div class="card" (click)="goToCadastroCurso()">
+            <div class="titulo2">Clique aqui para cadastrar um Curso</div>           
+        </div>
+
+        <div class="card card-central" (click)="goToCadastroTurma()">
+            <div class="titulo2">Clique aqui para cadastrar uma Turma</div>           
+        </div>
+
+    </div>
+</div>

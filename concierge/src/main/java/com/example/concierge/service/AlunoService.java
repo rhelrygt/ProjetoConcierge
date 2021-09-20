@@ -7,6 +7,7 @@ import com.example.concierge.view.AlunoView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 @Service
@@ -60,5 +61,9 @@ public class AlunoService {
 
     public Optional<Aluno> findById(Long id) {
         return repository.findById(id);
+    }
+
+    public ArrayList<Aluno> findAll(){
+        return (ArrayList<Aluno>) repository.findAll();
     }
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -28,4 +29,10 @@ public class CursoController {
     public Optional<Curso> findById(@PathVariable(value = "id")Long id) {
         return service.findById(id);
     }
+
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    public List<Curso> getList(){
+        return service.getList();
+    }
+
 }

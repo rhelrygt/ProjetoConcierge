@@ -1,0 +1,29 @@
+<div class="grid-container">
+    <div class="titulo">Turmas</div>
+    <div style="text-align: center;"><img src="../../../assets/normal_line.svg"></div>
+
+    <div class="subtitulo">Veja as turmas em aberto e se inscreva!</div>
+    <div  >
+        <div class="card" *ngFor="let turma of turmasArray">
+            <div class="titulo2">{{turma.nome}}</div>
+            <div style="text-align: center;" ><img src="../../../assets/normal_line_small.svg"></div>
+            <div class="descricao"> 
+                <strong>Data início do curso:</strong> {{turma.data_inicio}}
+                <br>
+                <strong>Data final do curso:</strong> {{turma.data_final}}
+                <br>
+                <strong>Horário:</strong> {{turma.horario_inicio}} às {{turma.horario_final}}
+                <br>
+                <strong>Vagas:</strong> {{turma.qtdmax}}
+
+            </div>
+            <div style="text-align: center;" ><img src="../../../assets/normal_line_small.svg"></div>
+            <div class="row">
+                <div class="col-sm-8 carga"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Strong>Local:</Strong> {{turma.local}}</div>
+                <div class="col-sm-4"><button (click)="inscreva(turma.id)" style="margin-bottom: 10px;">Inscreva-se</button></div>
+            </div>
+            
+        </div>
+
+    </div>
+</div>

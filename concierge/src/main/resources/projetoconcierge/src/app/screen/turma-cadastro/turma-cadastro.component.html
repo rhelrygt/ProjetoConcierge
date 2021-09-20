@@ -1,0 +1,59 @@
+<div class="grid-container">
+    <div class="titulo">Cadastrar Turma</div>
+    <div style="text-align: center;"><img src="../../../assets/normal_line.svg"></div>
+
+    <form class="form" [formGroup]="turmaForm">
+        <mat-form-field appearance="fill" class="example-full-width">
+            <mat-label>Professor da turma</mat-label>
+            <mat-select [formControlName]="'professor'">
+                <mat-option *ngFor="let professor of professorArray" [value]="professor.id">
+                    {{professor.nome}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="fill" class="example-full-width">
+            <mat-label>Curso da turma</mat-label>
+            <mat-select [formControlName]="'curso'">
+                <mat-option *ngFor="let curso of cursoArray" [value]="curso.id">
+                    {{curso.nome}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+
+        <div class="row">
+            <div class="col-sm-3"><label>Data de início:</label> <br><input type="date" [formControlName]="'dataInicio'"></div>
+            <div class="col-sm-3"><label>Data final:</label> <br><input type="date" [formControlName]="'dataFim'"></div>
+            <div class="col-sm-6"></div>
+        </div>
+        <br>
+        
+        <div class="row">
+            <div class="col-sm-3"><label>Horário inicio</label> <br><input type="time" [formControlName]="'horaInicio'"></div>
+            <div class="col-sm-3"><label>Horário final:</label> <br><input type="time" [formControlName]="'horaFim'"></div>
+            <div class="col-sm-6"></div>
+        </div>
+        <br>
+
+        <label>Data Limite de inscrição:</label> <br><input type="date" [formControlName]="'periodo'">
+        <br>
+        <br>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Quantidade máxima de alunos</mat-label>
+            <input matInput [formControlName]="'quantidade'" type="number">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Local</mat-label>
+            <input matInput [formControlName]="'local'" type="text">
+        </mat-form-field>
+
+        <div style="text-align: center;">
+            <button mat-raised-button class="btn-login" (click)="confirm()">Cadastrar</button>
+            <button mat-raised-button class="btn-cancel" routerLink="/coordenador">Cancelar</button>
+        </div>
+    </form>
+</div>

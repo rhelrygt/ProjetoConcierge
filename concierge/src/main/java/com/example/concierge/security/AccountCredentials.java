@@ -2,14 +2,14 @@ package com.example.concierge.security;
 
 public class AccountCredentials {
 
-    private String username;
+    private Long username;
     private String password;
 
-    public String getUsername() {
+    public Long getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
+    public void setUsername(Long username) {
         this.username = username;
     }
 

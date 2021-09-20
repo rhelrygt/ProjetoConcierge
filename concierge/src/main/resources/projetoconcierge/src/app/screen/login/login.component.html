@@ -1,0 +1,38 @@
+<div class="grid-container">
+    <div class="titulo">Fazer Login</div>
+    <div style="text-align: center;"><img src="../../../assets/normal_line.svg"></div>
+
+    <div class="subtitulo">Preencha o campo CPF e senha e clique em Acessar para prosseguir</div>
+
+
+    <form [formGroup]="loginform" style="text-align: center;">
+
+        <mat-form-field class="example-full-width">
+            <mat-label>CPF</mat-label>
+            <input matInput [formControlName]="'cpf'" type="number">
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Senha</mat-label>
+            <input matInput [formControlName]="'senha'" type="password">
+        </mat-form-field>
+        <br>
+        <a routerLink="/cadastrar/aluno">Esqueceu o seu usuário ou senha?</a>
+        <br>
+        <br>
+        <br>     
+
+        <button mat-raised-button class="btn-login" (click)="onClickLogin()">Login</button>
+        <br>
+        <br>
+        <br>
+
+        <h4>Ainda não possuí conta? <a routerLink="/aluno/perfil">Clique aqui!</a></h4>
+
+    </form>
+
+
+
+
+</div>

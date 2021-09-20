@@ -1,31 +1,39 @@
-import { TurmaComponent } from './components/cadastros/turma/turma.component';
-import { AlunoComponent } from './components/cadastros/aluno/aluno.component';
-import { HomepageComponent } from './components/homepage/homepage.component';
-import { LoginComponent } from './components/login/login.component';
-import { UpdateUsuarioComponent } from './update-usuario/update-usuario.component';
+import { ProfessorListarComponent } from './screen/professor-listar/professor-listar.component';
+import { ProfessorHomeComponent } from './screen/professor-home/professor-home.component';
+import { AlunoPerfilComponent } from './screen/aluno-perfil/aluno-perfil.component';
+import { AlunoHomeComponent } from './screen/aluno-home/aluno-home.component';
+import { SobreComponent } from './screen/sobre/sobre.component';
+import { ContatoComponent } from './screen/contato/contato.component';
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DataBindingComponent } from './data-binding/data-binding.component';
-import { UsuarioComponent } from './components/cadastros/usuario/usuario.component';
-import { AdminComponent } from './components/cadastros/admin/admin.component';
-import { CursoComponent } from './components/cadastros/curso/curso.component';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './screen/home/home.component';
+import { CursosComponent } from './screen/cursos/cursos.component';
+import { TurmasComponent } from './screen/turmas/turmas.component';
+import { LoginComponent } from './screen/login/login.component';
+import { HistoricoTurmaComponent } from './screen/historico-turma/historico-turma.component';
+import { CoordenadorHomeComponent } from './screen/coordenador-home/coordenador-home.component';
+import { CoordenadorCadastroComponent } from './screen/coordenador-cadastro/coordenador-cadastro.component';
+import { CursoCadastroComponent } from './screen/curso-cadastro/curso-cadastro.component';
+import { TurmaCadastroComponent } from './screen/turma-cadastro/turma-cadastro.component';
+
 
 const routes: Routes = [
-  {path:"primeiro", component: DataBindingComponent},
-  {path:"cadastrar-usuario", component: UsuarioComponent},
-  {path:"update-usuario", component: UpdateUsuarioComponent},
+  {path:"", component: HomeComponent},
+  {path:"cursos", component: CursosComponent},
+  {path:"cursos/cadastro", component: CursoCadastroComponent},
+  {path:"turmas", component: TurmasComponent},
+  {path:"turmas/cadastro", component: TurmaCadastroComponent},
+  {path:"turmas/historico", component: HistoricoTurmaComponent},
+  {path:"contato", component: ContatoComponent},
+  {path:"sobre", component: SobreComponent},
   {path:"login", component: LoginComponent},
-  {path:"cadastrar/aluno", component: AlunoComponent},
-  {path:"", component: HomepageComponent},
-  {path:"home", component: HomeComponent},
-  {path:"admin/cadastrar/usuario", component: AdminComponent},
-  {path:"admin/cadastrar/curso", component: CursoComponent},
-  {path:"admin/cadastrar/turma", component: TurmaComponent},
-
-
-
+  {path:"aluno", component: AlunoHomeComponent},
+  {path:"aluno/perfil", component: AlunoPerfilComponent},
+  {path:"coordenador", component: CoordenadorHomeComponent},
+  {path:"coordenador/cadastro", component: CoordenadorCadastroComponent},
+  {path:"professor", component: ProfessorHomeComponent},
+  {path:"professor/listar", component: ProfessorListarComponent}
   //{path: '', redirectTo: 'home', pathMatch: 'prefix' }
 ];
 

@@ -1,0 +1,28 @@
+<div class="grid-container">
+    <div class="titulo">Cadastrar Curso</div>
+    <div style="text-align: center;"><img src="../../../assets/normal_line.svg"></div>
+
+    <form class="form" [formGroup]="cursoform">
+        <mat-form-field class="example-full-width">
+            <mat-label>Nome do curso</mat-label>
+            <input matInput [formControlName]="'nome_curso'">
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Descricao</mat-label>
+            <input matInput [formControlName]="'descricao_curso'">
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Carga horaria</mat-label>
+            <input matInput [formControlName]="'carga_horaria'" type="number">
+        </mat-form-field>
+
+        <div style="text-align: center;">
+            <button mat-raised-button class="btn-login" (click)="confirm()">Cadastrar</button>
+            <button mat-raised-button class="btn-cancel" routerLink="/coordenador">Cancelar</button>
+        </div>
+    </form>
+</div>

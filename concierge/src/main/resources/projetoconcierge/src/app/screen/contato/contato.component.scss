@@ -1,0 +1,28 @@
+.grid-container {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: 100%;
+    padding: 10px;
+    margin: 0px 50px;
+}
+
+.titulo {
+    border-radius: 8px;
+    text-align: center;
+    font-size: 48px;
+    color: #881200;
+}
+
+.espaco{
+    width: 313px;
+    height: 89px;
+}
+
+.prefeitura{
+    width: 504px;
+    height: 89px;
+}
+
+.contatos{
+    text-align: center;
+}

@@ -7,6 +7,8 @@ import com.example.concierge.view.ProfessorView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Optional;
 
 @Service
@@ -41,5 +43,13 @@ public class ProfessorService {
 
     public Optional<Professor> findById(Long id) {
         return repository.findById(id);
+    }
+
+    public Collection<Object> findAllProfessor() {
+        return repository.findAllProfessores();
+    }
+
+    public ArrayList<Professor> findAll(){
+        return (ArrayList<Professor>) repository.findAll();
     }
 }

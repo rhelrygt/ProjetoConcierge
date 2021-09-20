@@ -1,21 +1,22 @@
 <body>
 	<mat-toolbar>
-	<button mat-icon-button class="example-icon"
-		aria-label="Example icon-button with menu icon">
-		<mat-icon>menu</mat-icon>
-	</button>
-	<span (click)="goToHome()">Plataforma Concierge</span> <span class="example-spacer"></span>
-	<!--<div>
-		<button mat-raised-button (click)="goEditarUsuario()">Editar
-			Cadastro</button>
-	</div>-->
-	<!--<div class="example-button-row">
-		<button mat-raised-button (click)="goToCadastrarUsuario()">Cadastrar-se</button>
-	</div>-->
-	<!-- <div>
-		<button mat-raised-button (click)="goToLogin()" color="primary">Entrar</button>
-	</div> -->
+		<div class="row" style="width: 100%;">
+			<div class="col-sm-1">
+				<img class="logo" src="../assets/normal_logo_u5.png" (click)="goToHome()">
+			</div>
+			<div class="col-sm-7" style="padding: 13px 0px;">
+				<app-titulos titulo="Cursos" (click)="goToCursos()"></app-titulos>
+				<app-titulos titulo="Turmas" (click)="goToTurmas()"></app-titulos>
+				<app-titulos titulo="Professor" (click)="goTo()"></app-titulos>
+			</div>
+			<div class="col-sm-4" style="padding: 13px 0px;">
+				<app-titulos titulo="Contato" (click)="goToContato()"></app-titulos>
+				<app-titulos titulo="Quem somos" (click)="goToSobre()"></app-titulos>
+				<img *ngIf="!readLocalStorageValue('id')" (click)="goToLogin()" class="personIcon" src="../assets/normal_account_icon_u16.svg" >
+				<img *ngIf="readLocalStorageValue('id')" (click)="logout()" class="personIcon" src="../assets/logout - 24px.png" >
+			</div>
+		</div>
 	</mat-toolbar>
-	
+
 	<router-outlet></router-outlet>
 </body>

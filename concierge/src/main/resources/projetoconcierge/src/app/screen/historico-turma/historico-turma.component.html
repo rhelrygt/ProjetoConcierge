@@ -1,0 +1,58 @@
+<div class="grid-container">
+    <div class="titulo">Historico da turma de {{Turma.nome}}</div>
+    <div style="text-align: center;"><img src="../../../assets/normal_line.svg"></div>
+    <div class="descricao">
+        <div class="row">
+            <div class="col-sm-6"><strong class="descricao_titulo">Data início do curso:</strong> {{Turma.dataInicio}}
+                &nbsp;
+                <strong class="descricao_titulo">Data final do curso:</strong> {{Turma.dataFinal}}
+                <br>
+                <strong class="descricao_titulo">Horário:</strong> {{Turma.horario}}
+                <br>
+                <strong class="descricao_titulo">Local:</strong> {{Turma.local}}
+            </div>
+            <div class="col-sm-6">
+                <strong class="descricao_titulo">Nota 1VA:</strong> {{Turma.n1}}
+                &nbsp;
+                <strong class="descricao_titulo">Nota 2VA:</strong> {{Turma.n2}}
+                &nbsp;
+                <strong class="descricao_titulo">Status:</strong> {{Turma.status}}
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div style="text-align: center;"><img src="../../../assets/normal_line.svg"></div>
+
+    <div style="text-align: center;">
+        <span class="subtitulo">Data</span> <span class="subtitulo">Status</span>
+    </div>
+    <br>
+
+    <div>
+        <div style="text-align: center;" *ngFor="let historico of ArrayHistorico">
+            <div class="historico_content">
+                <span class="historico">{{historico.data}}</span>
+                <span class="historico">{{historico.status}}</span>
+            </div>
+
+            <div style="text-align: center;"><img src="../../../assets/normal_line_small.svg"></div>
+            <!-- <div class="descricao"> 
+                <strong>Data início do curso:</strong> {{turma.dataInicio}}
+                <br>
+                <strong>Data final do curso:</strong> {{turma.dataFinal}}
+                <br>
+                <strong>Horário:</strong> {{turma.horario}}
+
+            </div>
+            <div style="text-align: center;" ><img src="../../../assets/normal_line_small.svg"></div>
+            <div class="row">
+                <div class="col-sm-8 carga"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Local:</strong> {{turma.local}}</div>
+                <div class="col-sm-4"><button (click)="goToInformacoes()" style="margin-bottom: 10px;">Ver mais</button></div>
+            </div> -->
+        </div>
+
+    </div>
+</div>

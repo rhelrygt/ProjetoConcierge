@@ -1,6 +1,6 @@
 <form [formGroup]="userform">
-    <div class="titulo-meio-tela">
-		<h2>Cadastrar Professor</h2>
+    <div class="titulo-card">
+		Cadastrar Professor
 	</div>
 
     <div class="row">
@@ -43,10 +43,10 @@
 
     <div class="row">
 		<div class="col-sm-6" style="text-align: right;">
-			<button mat-raised-button color="primary" (click)="confirm()">Cadastrar</button>
+			<button mat-raised-button class="btn-login" (click)="confirm()">Cadastrar</button>
 		</div>
 		<div class="col-sm-6" style="text-align: left;">
-			<button mat-raised-button routerLink="/">Voltar</button>
+			<button mat-raised-button class="btn-cancel" routerLink="/coordenador">Voltar</button>
 		</div>
 	</div>
 

@@ -1,50 +1,21 @@
-.example-spacer {
-  flex: 1 1 auto;
-}
-.example-button-row {
-  display: table-cell;
-  width: 120px;
-}
 
-.titulo-meio-tela{
-  padding-top: 1%;
-  text-align: center;
-}
 
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-}
-
-.example-full-width {
-  width: 100%;
+.mat-toolbar-single-row{
+  height: 98px;
+  background-color: rgba(249, 138, 139, 0.16) ;
+  border-radius: 5px;
 
 }
 
-td {
-  padding-right: 8px;
-}
-.example-section {
-  display: flex;
-  align-content: center;
-  align-items: center;
+.logo{
+  width: 60px;
   height: 60px;
+  cursor: pointer;
 }
 
-.example-margin {
-  margin: 0 10px;
-}
-.calendario{
-  float: right;
+.personIcon{
+  cursor: pointer;
+  padding-left: 85px;
 }
 
-.baixo{
-  padding-top: 10px;
-  padding-bottom: 162px;
-}
 
-.baixo2{
-  padding-top: 10px;
-  padding-bottom: 20px;
-}

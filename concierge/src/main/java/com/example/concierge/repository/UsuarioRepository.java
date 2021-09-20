@@ -6,6 +6,10 @@ import com.example.concierge.model.Usuario;
 
 public interface UsuarioRepository extends CrudRepository<Usuario, Long> {
 
+    default Usuario findByCpf() {
+        return findByCpf();
+    }
+
     Usuario findByCpf(Long cpf);
 	
 }

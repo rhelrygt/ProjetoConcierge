@@ -17,4 +17,7 @@ export class ProfessorService {
   public getUsuario(id: number): Observable<any> {
     return this.http.get(this.apiurl + '/professor/findbyid/' + id);
   }
+  public getAll(): Observable<any> {
+    return this.http.get(this.apiurl + '/professor/findAll');
+  }
 }
